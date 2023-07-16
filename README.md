@@ -15,3 +15,5 @@ https://19mg89.github.io/currency_converter/
 1. HTML
 2. CSS
 3. JavaScript 
+## Author
+Marcin Górnik
