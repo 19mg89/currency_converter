@@ -11,5 +11,7 @@ html {
     margin: 0 auto;
     font-family: "Oxygen";
     background-color: rgb(19, 1, 19);
-    color: rgb(232, 227, 227)
+    color: rgb(232, 227, 227);
+    background-image: url("../img/background.jpg");
+    background-size: cover;
 }
