@@ -1,0 +1,15 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: "Oxygen";
+    background-color: rgb(19, 1, 19);
+    color: rgb(232, 227, 227)
+}

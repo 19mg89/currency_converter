@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Kantor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="body">
+    <form class="form js-form">
+        <fieldset>
+            <legend class="form__legend">Mini kalkulator walut</legend>
+            <p>
+                <label class="form__field">
+                    Kwota w PLN: <input class="form__field js-ammount" required type="number" min="1" step="any">
+                </label>
+            </p>
+            <p>
+                <label class="form__field">
+                    Wymieniam na:
+                </label>
+                <select class="form__field js-currency">
+                    <option value="EUR">Euro</option>
+                    <option value="USD">Dolar Amerykański</option>
+                    <option value="GBP">Funt Szterling</option>
+                </select>
+                </span>
+            </p>
+
+            <button class="form__button">Przelicz!</button>
+            <button class="form__button2" input type="reset">Wyczyść!</button>
+        </fieldset>
+        <p>
+            Wynik:<strong class="js-result"></strong>
+        </p>
+    </form>
+
+</body>
+
+</html>

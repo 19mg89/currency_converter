@@ -1,0 +1,43 @@
+.form__legend {
+    text-align: center;
+    background-color: rgb(19, 189, 189);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 15px;
+}
+
+.form__field {
+    padding: 2px;
+    border-radius: 3px;
+    margin: 5px;
+
+
+}
+
+.form__button {
+    background-color: rgb(18, 110, 18);
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 35%;
+}
+
+.form__button2 {
+    background-color: rgb(158, 6, 6);
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 35%;
+}
+
+.form__button:hover {
+    background-color: rgb(20, 218, 23);
+}
+
+.form__button2:hover {
+    background-color: rgb(227, 35, 35);
+}
