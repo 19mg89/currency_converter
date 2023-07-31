@@ -1,33 +1,46 @@
-let formElement = document.querySelector(".js-form");
-let ammountElement = document.querySelector(".js-ammount");
-let currencyElement = document.querySelector(".js-currency");
-let resultElement = document.querySelector(".js-result");
+{
+    const calculateResult = (ammount, currency) => {
 
-let rateEUR = 0.21;
-let rateUSD = 0.23;
-let rateGBP = 0.19;
+        const rateEUR = 0.21;
+        const rateUSD = 0.23;
+        const rateGBP = 0.19;
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+        switch (currency) {
+            case "EUR":
+                return ammount * rateEUR;
 
-    let ammount = +ammountElement.value;
-    let currency = currencyElement.value;
+            case "USD":
+                return ammount * rateUSD;
 
-    let result;
+            case "GBP":
+                return ammount * rateGBP;
+        }
+    };
 
-    switch (currency) {
-        case "EUR":
-            result = ammount * rateEUR;
-            break;
+    const updateResultText = (ammount, currency, result) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerText = `${result.toFixed(2)} ${currency}`;
+    };
 
-        case "USD":
-            result = ammount * rateUSD;
-            break;
+    const onFormSubmit = (event) => {
+        event.preventDefault();
 
-        case "GBP":
-            result = ammount * rateGBP;
-            break;
-    }
+        const ammountElement = document.querySelector(".js-ammount");
+        const currencyElement = document.querySelector(".js-currency");
+        const ammount = +ammountElement.value;
+        const currency = currencyElement.value;
 
-    resultElement.innerText = `${result.toFixed(2)} ${currency}`;
-});
+        const result = calculateResult(ammount, currency);
+
+        updateResultText(ammount, currency, result);
+
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", onFormSubmit);
+    };
+
+    init();
+}
